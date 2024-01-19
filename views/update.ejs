@@ -1,0 +1,36 @@
+<%- include("partials/header") %>
+    <div class="table-container">
+      <h2>Update Todo</h2>
+      <div>
+      <a class="btn" href="/">back</a>
+    </div>
+      <form action="/update-todo/<%= todo._id  %>" method="post">
+        <div class="new-todo">
+          <div class="form-group">
+            <label for="title" class="text-light">Title</label>
+            <input
+              type="text"
+              name="title"
+              value="<%= todo.title  %>"
+              placeholder="type todo here"
+            />
+          </div>
+       
+       
+          <div class="form-group">
+            <label for="desc" class="text-light">Description</label>
+            <input
+              type="text"
+              name="desc"
+              value="<%= todo.desc %>"
+              placeholder="type Description here"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn">save</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
